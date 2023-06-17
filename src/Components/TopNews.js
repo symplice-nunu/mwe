@@ -1,13 +1,66 @@
 import React from 'react'
+import { AiOutlineClockCircle } from 'react-icons/ai'
 
 export default function TopNews() {
   return (
     <div className='flex space-x-[2px] bg-red-400 my-8'>
-        <div className='w-full'></div>
-        <div className='bg-teal-400 w-[260px]'></div>
+        <div className='w-full text-white flex items-end pb-[30px] pl-[25px] pr-[84px]'>
+            <div className='w-full'>
+            <div className='bg-[#9f4bc3] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[108px]'>ENTERTAINMENT</div>
+            <div className='text-[26px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
+            <div className='flex space-x-3'>
+            <div className='text-[11px]'><span className='text-[#fcfcfc]'>BY</span> <b>Mc CADMAN</b></div>
+            <div className='text-[11px] flex space-x-[2px] text-[#fcfcfc]'>
+                <div className='pt-[3px]'><AiOutlineClockCircle /></div>
+                <div>MAY 24, 2023</div>
+            </div>
+            </div>
+            </div>
+            <div className='w-[0px]'></div>
+        </div>
+        <div className='bg-teal-400 w-[590px] flex items-end pb-[30px] px-[15px] text-white'>
+        <div className='w-full'>
+            <div className='bg-[#fe495c] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[66px]'>BUSINESS</div>
+            <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
+            <div className='flex space-x-3'>
+            <div className='text-[11px]'><span className='text-[#fcfcfc]'>BY</span> <b>Mc CADMAN</b></div>
+            <div className='text-[11px] flex space-x-[2px] text-[#fcfcfc]'>
+                <div className='pt-[3px]'><AiOutlineClockCircle /></div>
+                <div>MAY 24, 2023</div>
+            </div>
+            </div>
+            </div>
+            <div className='w-[0px]'></div>
+        </div>
         <div className='space-y-[2px]'>
-        <div className='w-[260px] bg-blue-300 h-[200px]'></div>
-        <div className='w-[260px] bg-blue-300 h-[200px]'></div>
+        <div className='w-[290px] bg-blue-300 h-[250px] flex items-end pb-[30px] px-[15px] text-white'>
+        <div className='w-full'>
+            <div className='bg-[#9f4bc3] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[108px]'>ENTERTAINMENT</div>
+            <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
+            <div className='flex space-x-3'>
+            <div className='text-[11px]'><span className='text-[#fcfcfc]'>BY</span> <b>Mc CADMAN</b></div>
+            <div className='text-[11px] flex space-x-[2px] text-[#fcfcfc]'>
+                <div className='pt-[3px]'><AiOutlineClockCircle /></div>
+                <div>MAY 24, 2023</div>
+            </div>
+            </div>
+            </div>
+            <div className='w-[0px]'></div>
+        </div>
+        <div className='w-[290px] bg-blue-300 h-[250px] flex items-end pb-[30px] px-[15px] text-white'>
+        <div className='w-full'>
+            <div className='bg-[#c49529] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[63px]'>FASHION</div>
+            <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
+            <div className='flex space-x-3'>
+            <div className='text-[11px]'><span className='text-[#fcfcfc]'>BY</span> <b>Mc CADMAN</b></div>
+            <div className='text-[11px] flex space-x-[2px] text-[#fcfcfc]'>
+                <div className='pt-[3px]'><AiOutlineClockCircle /></div>
+                <div>MAY 24, 2023</div>
+            </div>
+            </div>
+            </div>
+            <div className='w-[0px]'></div>
+        </div>
         </div>
     </div>
   )

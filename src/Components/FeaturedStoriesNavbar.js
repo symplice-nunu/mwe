@@ -22,6 +22,7 @@ export default function FeaturedStoriesNavbar() {
       <div className='h-[2px] mt-2 bg-[#fe495c] w-10'></div>
       <div className='h-[2px] mt-2 bg-[#eeeeee] w-full'></div>
     </div>
+    <div>asddsjbfbsdjfbjsdbfjsdbjfbjsdbfjbsdjfbjsdbfjdsbfjbjsdjfjbsd</div>
     </div>
   )
 }

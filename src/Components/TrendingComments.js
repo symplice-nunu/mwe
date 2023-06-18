@@ -24,7 +24,7 @@ export default function TrendingComments() {
         date: '3h ago',
         commentCount: 3,
         shareCount: 2,
-      },,
+      },
       {
         id: 2,
         photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/37-750x375.jpg',

@@ -2,10 +2,12 @@ import React from 'react'
 import { TopNewsData } from './Data/TopNewsData'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { FaRegComment } from 'react-icons/fa'
+import TrendingStories from './TrendingStories'
 
 export default function TopHeadlines() {
   return (
-    <div className='mt-6 flex space-x-6'>
+    <div>
+        <div className='mt-6 flex space-x-6'>
         <div>
             {
                 TopNewsData.map((item) => {
@@ -50,6 +52,8 @@ export default function TopHeadlines() {
                 })
             }
         </div>
+    </div>
+    <div><TrendingStories /></div>
     </div>
   )
 }

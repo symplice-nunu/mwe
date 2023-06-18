@@ -9,6 +9,7 @@ export default function Home() {
         <Navbar />
         <TopNews />
         <FeaturedStories />
+        
     </div>
   )
 }

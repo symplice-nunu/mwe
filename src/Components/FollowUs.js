@@ -1,5 +1,6 @@
 import React from 'react'
 import SocialMedia from './SocialMedia'
+import TrendingComments from './TrendingComments'
 
 export default function FollowUs() {
   return (
@@ -10,6 +11,7 @@ export default function FollowUs() {
     <div className='h-[2px] mt-2 bg-[#eeeeee] w-full'></div>
   </div>
   <div><SocialMedia /></div>
+  <TrendingComments />
   </div>
   )
 }

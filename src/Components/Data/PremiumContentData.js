@@ -1,6 +1,6 @@
-export const TrendingStoriesData = [
+export const PremiumContentData = [
     {
-        title: 'TRAVEL',
+        title: 'FOOD',
         photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/16-350x250.jpg',
         headlines: 'Barack Obama and Family Visit Balinese Paddy Fields During Vacation',
         time: 'MAY 18, 2020',
@@ -12,7 +12,13 @@ export const TrendingStoriesData = [
         time: 'MAY 26, 2020',
     },
     {
-        title: 'BUSINESS',
+        title: 'HEALTH',
+        photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/02-750x375.jpg',
+        headlines: 'Travel and Transportation During The Coronavirus Pandemic',
+        time: 'MAY 18, 2020',
+    },
+    {
+        title: 'FASHION',
         photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/02-750x375.jpg',
         headlines: 'Travel and Transportation During The Coronavirus Pandemic',
         time: 'MAY 18, 2020',

@@ -1,12 +1,13 @@
 import React from 'react'
 import { NavbarData } from './Data/NavbarData'
 import { AiOutlineSearch } from 'react-icons/ai'
+import Og from '../Assets/images/og.png'
 
 export default function Navbar() {
   return (
     <div>
-        <div className='py-[20px]'>
-            <img className='w-[360px]' src="https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/05/logo@2x.png" />
+        <div className='py-[5px]'>
+            <img className='w-[120px]' src={Og} />
         </div>
     <div className=' bg-[#1b2227] flex justify-between px-[20px]'>
     <div  className='flex text-[#f5f5f5]  font-[Poppins] text-[15px] text-[uppercase]'>

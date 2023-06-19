@@ -7,13 +7,14 @@ import { FaRegComment } from 'react-icons/fa'
 export default function Entertainment() {
   return (
     <div className='mt-6'>
-        <div className='text-[17px] text-[#9f4bc3]'>Trending Stories</div>
-        <div className='flex my-2'>
+        
+      <div className='flex gap-10'>
+      <div>
+      <div className='text-[17px] text-[#9f4bc3]'>World</div>
+        <div className='flex my-2 mb-6'>
         <div className='bg-[#9f4bc3] h-[2px] w-[40px]'></div>
         <div className='bg-[#eeeeee] h-[2px] w-full'></div>
       </div>
-      <div className='flex gap-10'>
-      <div className='mt-5'>
             {
                 TopNewsData.map((item) => {
                     return(
@@ -37,7 +38,12 @@ export default function Entertainment() {
                 })
             }
         </div>
-        <div className='mt-5'>
+        <div className=''>
+      <div className='text-[17px]  text-[#c67837]'>World</div>
+        <div className='flex my-2 mb-6'>
+        <div className='bg-[#c67837] h-[2px] w-[40px]'></div>
+        <div className='bg-[#eeeeee] h-[2px] w-full'></div>
+      </div>
             {
                 TopNewsData.map((item) => {
                     return(

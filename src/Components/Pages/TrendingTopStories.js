@@ -12,8 +12,8 @@ export default function TrendingTopStories() {
         {
             TrendingStoriesData.map((item) => {
                 return(
-                    <div className='text-white w-[260px]'>
-                        <div className="bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/20-750x375.jpg')] bg-cover bg-center w-[260px] h-[150px] flex items-end p-2">
+                    <div className='text-white w-[320px]'>
+                        <div className="bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/20-750x375.jpg')] bg-cover bg-center w-[320px] h-[200px] flex items-end p-2">
                             <div className={`${item.title === "TRAVEL" ? "bg-[#dfca3e]" : item.title === "BUSINESS" ? "bg-[#fe495c]" : "bg-[#3cdc96]"} font-[Heebo] text-[11px] px-[7px] py-[2px] rounded`}>{item.title}</div>
                         </div>
                         <div className='text-[#1b2227] font-[Poppins] hover:text-[#65b5fd] text-[18px] my-3'>{item.headlines}</div>

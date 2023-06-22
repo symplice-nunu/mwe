@@ -19,9 +19,9 @@ export default function Navbar() {
             NavbarData.map((item) => {
                 return(
                         <Link to={item.path}>
-                         <div className={`${item.name === "HOME" ? "bg-[#1d96fb]" : null} flex space-x-2 hover:bg-[#1d96fb] cursor-pointer hover:h-full py-[16px] px-3`}>
+                         <div className={`${active === item.path ? "bg-[#1d96fb]" : null} flex space-x-2 hover:bg-[#1d96fb] cursor-pointer hover:h-full py-[16px] px-3`}>
                             <div>{item.name}</div>
-                            <div className={`${item.name === "HOME" ? "hidden" : null} text-[#93979a] pt-1`}>{item.NavIcon}</div>
+                            <div className={`${item.name === "HOME" ? "hidden" : null} hover:text-white text-[#93979a] pt-1`}>{item.NavIcon}</div>
                         </div>
                         </Link>
                 )

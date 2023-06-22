@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiOutlineShareAlt } from 'react-icons/ai'
+import Categories from './Categories'
 
 export default function PopularPost() {
   return (
@@ -85,6 +86,7 @@ export default function PopularPost() {
     <div><input type="button" className='w-full mb-4 text-center rounded text-white bg-[#1e96fc]  h-[42px] ' value='SIGN UP' /></div>
 
   </div>
+  <Categories />
   </div>
   )
 }

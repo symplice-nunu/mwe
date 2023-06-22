@@ -10,8 +10,8 @@ import Copyright from './Copyright'
 export default function Home() {
   return (
     <div>
-      <div className='px-[120px]'>
         <Navbar />
+      <div className='px-[120px]'>
         <TopNews />
         <FeaturedStories />
         

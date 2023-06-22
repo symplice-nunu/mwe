@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import PremiumContent from './PremiumContent'
 import TopNews from './TopNews'
 import LatestPosts from './LatestPosts'
+import Footer from './Footer'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
     <div className="px-[120px] py-[15px]">
     <LatestPosts /> 
     </div>
+    <div className="bg-[#222a2f] text-white px-[120px] py-[35px]"><Footer /></div>
     </div>
   )
 }

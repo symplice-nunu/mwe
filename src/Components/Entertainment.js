@@ -10,7 +10,7 @@ export default function Entertainment() {
         
       <div className='flex gap-10'>
       <div>
-      <div className='text-[17px] text-[#9f4bc3]'>World</div>
+      <div className='text-[17px] text-[#9f4bc3]'>Entertainment</div>
         <div className='flex my-2 mb-6'>
         <div className='bg-[#9f4bc3] h-[2px] w-[40px]'></div>
         <div className='bg-[#eeeeee] h-[2px] w-full'></div>
@@ -73,10 +73,10 @@ export default function Entertainment() {
             {
                 TopNewsData.map((item) => {
                     return(
-                 <div className='grid grid-cols-2 mb-6'>
-                    <div><img className='w-[150px] ' src={item.Photo} /></div>
+                 <div className='flex gap-5 mb-6'>
+                    <div><img className='w-[150px] h-[100px] object-cover ' src={item.Photo} /></div>
                     <div>
-                    <div className='text-[15px] font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
+                    <div className='text-[16px] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
                     <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>
                         <div><AiOutlineClockCircle className='mt-[2px]' /></div>
                         <div>{item.Time}</div>
@@ -91,10 +91,10 @@ export default function Entertainment() {
             {
                 TopNewsData.map((item) => {
                     return(
-                 <div className='grid grid-cols-2 mb-6'>
-                    <div><img className='w-[150px] ' src={item.Photo} /></div>
+                 <div className='flex gap-5 mb-6'>
+                    <div><img className='w-[150px] h-[100px] object-cover ' src={item.Photo} /></div>
                     <div>
-                    <div className='text-[15px] font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
+                    <div className='text-[16px] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
                     <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>
                         <div><AiOutlineClockCircle className='mt-[2px]' /></div>
                         <div>{item.Time}</div>

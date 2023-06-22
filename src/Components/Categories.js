@@ -15,7 +15,7 @@ export default function Categories() {
         return (
             <div>
             <div className='flex justify-between mb-2'>
-    <div className='font-bold font-[Heebo] text-[19px]'>{item.CategoryName}</div>
+    <div className='font-bold font-[Heebo] text-[19px] hover:text-[#1d96fb]'>{item.CategoryName}</div>
     <div className='text-[#a0a0a0]'>({item.CategoryNumber})</div>
   </div>
   <div className='h-[2px] mb-2 bg-[#eeeeee] w-full'></div>

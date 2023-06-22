@@ -11,7 +11,7 @@ export default function PopularPost() {
     <div className='h-[2px] mt-2 bg-[#eeeeee] w-full'></div>
   </div>
   <div className='mt-[25px]'>
-    <div><img  className='w-full' src="https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/03-350x250.jpg" /></div>
+    <div><img  className='w-full object-cover' src="https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/03-350x250.jpg" /></div>
     <div className='my-5 flex space-x-4'>
         <div className='text-[28px] font-bold font-[Poppins] hover:text-[#1d96fb]'>Instagram Is Testing Photo Albums, Because Nothing Is Sacred Anymore</div>
         <div className='w-[5px] h-[20] bg-[#eeeeee]'></div>

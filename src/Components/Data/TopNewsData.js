@@ -15,6 +15,7 @@ export const TopNewsData = [
         Author: '',
         Time: 'MAY 26, 2020',
         Photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/37-750x375.jpg',
+        Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
         Level: 'Mid',
@@ -23,6 +24,7 @@ export const TopNewsData = [
         Author: '',
         Time: 'MAY 18, 2020',
         Photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/07-750x375.jpg',
+        Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
         Level: 'Mid',
@@ -31,6 +33,7 @@ export const TopNewsData = [
         Author: '',
         Time: 'MAY 26, 2020',
         Photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/11-750x375.jpg',
+        Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
         Level: 'Mid',
@@ -39,5 +42,6 @@ export const TopNewsData = [
         Author: '',
         Time: 'MAY 26, 2020',
         Photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/08-750x375.jpg',
+        Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     }
 ]

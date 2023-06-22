@@ -153,7 +153,7 @@ export default function TrendingComments() {
                     className="relative rounded-md"
                   >
                    <div className='grid grid-cols-2 mb-[23px]'>
-                   <div><img className='w-[120px] h-[80px]' src={post.photo} /></div>
+                   <div><img className='w-[150px] object-cover h-[100px]' src={post.photo} /></div>
                    <div>
                    <div>
                     <h3 className="text-sm font-medium leading-5">

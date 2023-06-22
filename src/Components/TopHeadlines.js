@@ -12,9 +12,9 @@ export default function TopHeadlines() {
             {
                 TopNewsData.map((item) => {
                     return(
-                        <div className={`${item.Level === "Mid" ? "hidden" : null} w-[400px]`}>
-                            <div><img className='w-[400px]' src={item.Photo} /></div>
-                            <div className='font-[Poppins] text-[20px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
+                        <div className={`${item.Level === "Mid" ? "hidden" : null} w-[600px]`}>
+                            <div><img className='w-[600px] object-cover' src={item.Photo} /></div>
+                            <div className='font-[Poppins] text-[30px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                             <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>
                                 <div className='text-[#aaaaaa]'>BY <span className='text-[#1d96fb]'>{item.Author}</span></div>
                                 <div className='flex space-x-1 text-[#aaaaaa]'>
@@ -38,10 +38,10 @@ export default function TopHeadlines() {
             {
                 TopNewsData.map((item) => {
                     return(
-                 <div className='grid grid-cols-2 mb-6'>
-                    <div><img className='w-[150px] ' src={item.Photo} /></div>
+                 <div className='flex gap-5 mb-6'>
+                    <div><img className='w-[150px] h-[100px] object-cover' src={item.Photo} /></div>
                     <div>
-                    <div className='text-[15px] font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
+                    <div className='text-[20px] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
                     <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>
                         <div><AiOutlineClockCircle className='mt-[2px]' /></div>
                         <div>{item.Time}</div>

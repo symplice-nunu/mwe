@@ -8,8 +8,8 @@ export default function Sport() {
   return (
     <div>
     <div><Navbar /></div>
-    <div className='px-[120px]'>
-    <div><SportTopNews /></div>
+    <div className='px-[120px] pt-[130px]'>
+        <div><SportTopNews /></div>
     </div>
     <div className="bg-[#222a2f] text-white px-[120px] py-[35px]">
       <Footer />

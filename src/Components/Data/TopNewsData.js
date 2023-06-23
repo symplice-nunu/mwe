@@ -1,5 +1,6 @@
 export const TopNewsData = [
     {
+        Category: 'sport',
         Level: 'Top',
         Title: 'BUSINESS',
         Headlines: 'Google, Facebook Extend Work From Home Policies Until 2021',
@@ -9,6 +10,7 @@ export const TopNewsData = [
         Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
+        Category: 'sport',
         Level: 'Mid',
         Title: '',
         Headlines: 'These Foods to Absolutely Avoid If You Want Clear, Glowing Skin',
@@ -18,6 +20,7 @@ export const TopNewsData = [
         Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
+        Category: 'business',
         Level: 'Mid',
         Title: '',
         Headlines: 'Will It Be Safe to Travel This Summer? Here’s Your Options',
@@ -27,6 +30,7 @@ export const TopNewsData = [
         Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
+        Category: 'business',
         Level: 'Mid',
         Title: '',
         Headlines: 'Cleaners Vs. Disinfectants: What You Need to Know',
@@ -36,6 +40,7 @@ export const TopNewsData = [
         Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {
+        Category: 'lifestyle',
         Level: 'Mid',
         Title: '',
         Headlines: 'Fashion Stories From Around The Web You Might Have Missed',

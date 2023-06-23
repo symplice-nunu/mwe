@@ -3,11 +3,13 @@ import { NavbarData } from './Data/NavbarData'
 import { AiOutlineSearch } from 'react-icons/ai'
 import Og from '../Assets/images/og.png'
 import { Link, useLocation } from 'react-router-dom'
+import { TopNewsData } from './Data/TopNewsData'
 
 export default function Navbar() {
     const location = useLocation();
     const active = location.pathname
     const [isMouseOver, setIsMouseOver] = useState(false);
+    // alert(active);
   
     const handleMouseEnter = () => {
       setIsMouseOver(true);
@@ -47,8 +49,21 @@ export default function Navbar() {
                 
             </div>
             {isMouseOver && 
-            <div className='w-full h-[200px] bg-[#f5f0f6]' >
-
+            <div className='flex w-full h-full bg-[#f5f0f6] p-[20px]' >
+                <div className='flex gap-4'>
+                {
+                    TopNewsData.map((item) => {
+                        return(
+                        <div className=''>
+                            <div><img className='w-full h-[180px] object-cover' src={item.Photo} /></div>
+                            <div>
+                            <div className='font-[Heebo] text-[20px] text-[#595c5f] mb-4'>{item.Content}</div>
+                            </div>
+                        </div>
+                        )
+                    })
+                }
+                </div>
             </div>}
         </div>
     </div>

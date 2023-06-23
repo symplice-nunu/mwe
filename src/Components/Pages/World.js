@@ -7,7 +7,7 @@ export default function World() {
   return (
     <div>
         <div><Navbar /></div>
-    <div className='px-[120px]'>
+    <div className='px-[120px] pt-[130px]'>
     <div><WorldTopNews /></div>
     </div>
     <div className="bg-[#222a2f] text-white px-[120px] py-[35px]">

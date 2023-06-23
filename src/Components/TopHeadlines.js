@@ -38,14 +38,14 @@ export default function TopHeadlines() {
             {
                 TopNewsData.map((item) => {
                     return(
-                 <div className='flex gap-5 mb-6'>
-                    <div><img className='w-[150px] h-[100px] object-cover' src={item.Photo} /></div>
-                    <div>
-                    <div className='text-[20px] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
-                    <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>
-                        <div><AiOutlineClockCircle className='mt-[2px]' /></div>
-                        <div>{item.Time}</div>
-                    </div>
+                 <div className='flex gap-5 mb-6 '>
+                    <div className='w-[150px] h-[100px]'><img className='w-full h-full object-cover' src={item.Photo} /></div>
+                    <div className='w-[80%] min-h-[70px]'>
+                        <h1 className='text-[20px] w-[80%] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</h1>
+                        <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>
+                            <AiOutlineClockCircle className='mt-[2px]' />
+                            <span>{item.Time}</span>
+                        </div>
                     </div>
                 </div>
                     )

@@ -2,12 +2,15 @@ import React from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Copyright from '../Copyright'
+import SportTopNews from '../Sport/SportTopNews'
 
 export default function Sport() {
   return (
     <div>
     <div><Navbar /></div>
-    <div className='px-[120px]'>Test 4</div>
+    <div className='px-[120px]'>
+    <div><SportTopNews /></div>
+    </div>
     <div className="bg-[#222a2f] text-white px-[120px] py-[35px]">
       <Footer />
     </div>

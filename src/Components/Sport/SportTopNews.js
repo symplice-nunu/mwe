@@ -76,15 +76,15 @@ export default function SportTopNews() {
     </Link>    
     <div className='mt-[5px] text-[#b2acb5]'><TbMathGreater /></div>
 
-    <Link to="/world">
+    <Link to="/sport">
     <div className='hover:text-[#1d96fb]'>Category</div>
     </Link>
     <div className='mt-[5px] text-[#b2acb5]'><TbMathGreater /></div>
-    <Link to="/world">
-    <div className='text-[#b2acb5] hover:text-[#1d96fb]'>World</div>
+    <Link to="/sport">
+    <div className='text-[#b2acb5] hover:text-[#1d96fb]'>Sport</div>
     </Link>
   </div>
-  <div className='font-bold text-[60px] font-[Heebo]'>World</div>
+  <div className='font-bold text-[60px] font-[Heebo]'>Sport</div>
   <div className='flex gap-4'>
     <div>
     <TopLatestPost />

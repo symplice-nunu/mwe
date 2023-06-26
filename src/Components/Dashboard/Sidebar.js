@@ -32,11 +32,11 @@ export default function Sidebar(){
     ]
     return(
          /* Sidebar Options. Done by Symplice 21.03.2023  */
-        <div className="mx-4 w-[140px] mt-8  hidden md:flex flex-col justify-between text-sky-800 ">
+        <div className="mx-4 w-[140px] pt-8  hidden md:flex flex-col justify-between text-sky-800 ">
                <div className='grid grid-col gap-y-4'>
                <div className="flex items-center text-red-500 text-6xl px-4">
                     <div>
-                    <img className='h-24 w-24' src={mweLogo} alt="logo"/>
+                    <img className='h-20 w-20' src={mweLogo} alt="logo"/>
                     </div>
                 </div>
                 {

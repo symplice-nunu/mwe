@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div>
        <div className='flex justify-between items-center text-sky-900 font-bold mb-4'>
-                       <div className='flex items-center'>
+       <div className='flex items-center'>
                        MILLION WAY ENTERTAINMENT
                         <span className='text-orange-500 ml-2'>
                             <FaChevronDown />

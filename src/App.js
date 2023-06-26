@@ -6,6 +6,9 @@ import Sport from "./Components/Pages/Sport";
 import Business from "./Components/Pages/Business";
 import Entertainment from "./Components/Pages/Entertainment";
 import NotFound from "./Components/Pages/404";
+import Dashboard from "./Components/Dashboard/Dashboard"
+import News from "./Components/Dashboard/News"
+import AddNews from "./Components/Dashboard/AddNews";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route exact path="/business" element={<Business />} ></Route>
         <Route exact path="/entertainment" element={<Entertainment />} ></Route>
         <Route exact path="/sport" element={<Sport />} ></Route>
+        <Route exact path="/news" element={<News />} ></Route>
+        <Route exact path="/dashboard" element={<Dashboard />} ></Route>
+        <Route exact path="/add_news" element={<AddNews />} ></Route>
         <Route path="*" element={<NotFound />} ></Route>
       </Routes>
       </BrowserRouter>

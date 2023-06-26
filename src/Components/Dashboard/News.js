@@ -20,7 +20,7 @@ export default function News() {
             </div>
             <div>
             
-            <div className="flex">
+            <div className="flex ">
                     <div className="bg-white rounded-xl px-3 py-3 h-auto w-full mr-4">
                         <div>
                         <>
@@ -34,13 +34,13 @@ export default function News() {
       {showModal ? (
         <>
           <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none "
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none ">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t ">
                   <h3 className="text-3xl font-semibold">
                     ADD NEWS
                   </h3>
@@ -55,124 +55,62 @@ export default function News() {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className=" text-slate-500 text-lg leading-relaxed">
-                    <div class=" bg-gray-100 p-0 sm:p-3 sm:rounded-3xl">
-  <div class="mx-auto px-6 py-3 bg-white border-0 shadow-lg sm:rounded-3xl">
+                  <p className=" text-slate-500 text-lg leading-relaxed ">
+                    <div class=" bg-gray-100 p-0 sm:p-3 sm:rounded-3xl ">
+  <div class="mx-auto px-6 py-3 bg-white border-0 shadow-lg sm:rounded-3xl w-[650px]">
     <form id="form" novalidate>
-      <div class="relative z-0 w-full">
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter project name"
-          required
-          class="block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <span class="text-sm text-red-600 hidden" id="error">Project Name is required</span>
-      </div>
+     
 
       <div class="relative z-0 w-full mb-5">
         <input
           type="text"
           name="email"
-          placeholder="Enter project description"
+          placeholder="Enter News Title"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
         />
-        <span class="text-sm text-red-600 hidden" id="error">Project description is required</span>
+        <span class="text-sm text-red-600 hidden" id="error">News Title is required</span>
+      </div>
+      <div class="relative z-0 w-full mb-5 ">
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter Headlines"
+          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+        />
+        <span class="text-sm text-red-600 hidden" id="error">Headlines is required</span>
+      </div>
+      <div class="relative z-0 w-full mb-5">
+        <input
+          type="text"
+          name="Headlines"
+          placeholder="Enter Author"
+          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+        />
+        <span class="text-sm text-red-600 hidden" id="error">Author is required</span>
       </div>
 
       <div class="relative z-0 w-full mb-5">
         <input
           type="text"
           name="password"
-          placeholder="Project type"
+          placeholder="Enter News Photo"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
         />
-        <span class="text-sm text-red-600 hidden" id="error">Project type is required</span>
+        <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
       </div>
 
-      <fieldset class="relative z-0 w-full p-px mb-5">
-        <legend class="absolute text-gray-500 transform scale-75 -top-3 origin-0">Choose an level</legend>
-        <div class="block pt-3 pb-2 space-x-4">
-          <label>
-            <input
-              type="radio"
-              name="radio"
-              value="1"
-              class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
-            />
-            Level 1
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="radio"
-              value="2"
-              class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
-            />
-            Level 2
-          </label>
-        </div>
-        <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
-      </fieldset>
-
-      <div class="relative z-0 w-full mb-5">
-        <select
-          name="select"
-          value=""
-          class="pt-3 pb-2 w-full px-0 mt-0 bg-transparent border-0 border-b-2 z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        >
-          <option value="">Select Development type</option>
-          <option value="Java">Java</option>
-          <option value="Laravel">Laravel</option>
-          <option value="Python">Python</option>
-          <option value="Ruby">Ruby</option>
-          <option value="Wordpress">Wordpress</option>
+<div class="relative z-0 w-full mb-5">
+        <select className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
+            <option>Entertainment</option>
+            <option>Business</option>
+            <option>Sport</option>
+            <option>Health</option>
+            <option>Lifestyle</option>
         </select>
-        <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
-      </div>
+  <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
+</div>
 
-      <div class="flex flex-row space-x-4">
-        <div class="relative z-0 w-full mb-5">
-          <input
-            type="text"
-            name="date"
-            placeholder="Date"
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <span class="text-sm text-red-600 hidden" id="error">Date is required</span>
-        </div>
-        <div class="relative z-0 w-full">
-          <input
-            type="text"
-            name="time"
-            placeholder="Time"
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <span class="text-sm text-red-600 hidden" id="error">Time is required</span>
-        </div>
-      </div>
-
-      <div class="relative z-0 w-full mb-5">
-        <input
-          type="number"
-          name="money"
-          placeholder="Amount"
-          class="pt-3 pb-2 pl-5 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <div class="absolute top-0 left-0 mt-3 ml-1 text-gray-400">$</div>
-        <span class="text-sm text-red-600 hidden" id="error">Amount is required</span>
-      </div>
-
-      <div class="relative z-0 w-full mb-5">
-        <input
-          type="text"
-          name="duration"
-          placeholder="Duration"
-          class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <div class="absolute top-0 right-0 mt-3 mr-4 text-gray-400">min</div>
-        <span class="text-sm text-red-600 hidden" id="error">Duration is required</span>
-      </div>
+    
     </form>
   </div>
 </div>

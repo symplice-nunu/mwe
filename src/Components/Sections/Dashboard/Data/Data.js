@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 import axios from 'axios';
 import { BiEdit } from 'react-icons/bi';
 import { AiFillDelete } from 'react-icons/ai';
@@ -7,6 +7,25 @@ import React, { useState } from 'react'
 
 const Data = () => {
   const [selectedData, setSelectedData] = useState({});
+  const queryClient = useQueryClient();
+  const mutation = useMutation(async (id) => {
+    await axios.delete(`http://localhost:5000/api/v1/news/${id}`);
+  }, {
+    onSuccess: () => {
+      queryClient.invalidateQueries('example');
+    },
+  });
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleDelete = async (id) => {
+    // mutation.mutate(id);
+    try {
+      await mutation.mutateAsync(id);
+      setSuccessMessage('News Deleted Successful!');
+    } catch (error) {
+      // Handle error if needed
+    }
+  };
   const [showModal, setShowModal] = React.useState(false);
   const { data, isLoading, error } = useQuery('example', async () => {
   const response = await axios.get('http://localhost:5000/api/v1/news');
@@ -165,7 +184,10 @@ const Data = () => {
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
-      ) : null}
+      ) : null}{successMessage && 
+      <div className='bg-red-400 rounded text-center text-white py-2 my-2 text-[20px]'><p>{successMessage}</p>
+      </div>
+      }
     <table className='w-full'>
                 <tr className='text-sky-600 h-10'>
                     <th className='w-48 text-center'>ID</th>
@@ -229,11 +251,17 @@ const Data = () => {
 
                     <td className='pr-4'>
                       <div className='flex space-x-3'>
-                          <div ><BiEdit onClick={() => {
+                          <div ><BiEdit 
+                            onClick={() => {
                             setSelectedData(item);
                             setShowModal(true)
                             }} className='cursor-pointer text-[23px] text-green-500' /></div>
-                          <div><AiFillDelete className='text-[23px] text-red-500' /></div>
+                          <div>
+                            <AiFillDelete
+                            onClick={() => 
+                            handleDelete(item.id)} 
+                            className='text-[23px] text-red-500 cursor-pointer' />
+                            </div>
                       </div>
                     </td>
                   </tr>

@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Sidebar from './Sidebar'
 import Navbar from "./Navbar"
 import { Data } from "./Data/Data"
 import { BiEdit } from "react-icons/bi"
 import { AiFillDelete } from "react-icons/ai"
+import { Link } from 'react-router-dom'
 
 export default function News() {
     const [showModal, setShowModal] = React.useState(false);
+    const [apiData, setApiData] = useState([]);
+    useEffect(() => {
+      axios.get('http://localhost:5000/api/v1/news')
+        .then(response => {
+          setApiData(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching API data:', error);
+        });
+    }, []);
   return (
     <div className='bg-[#87cefa] w-full h-screen p-12'>
         <div className='bg-white w-full rounded-3xl flex'>
@@ -109,7 +121,11 @@ export default function News() {
         </select>
   <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
 </div>
-
+<div class="relative z-0 w-full mb-5">
+    <textarea placeholder='Enter full News Content' className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
+        
+    </textarea>
+</div>
     
     </form>
   </div>
@@ -144,43 +160,61 @@ export default function News() {
                     <div>
                     <table className='w-full'>
                                 <tr className='text-sky-600 h-10'>
-                                    <th className='w-48 text-center pl-3'>ID</th>
-                                    <th className='w-48 text-left pl-3'>Category</th>
-                                    <th className='w-32 text-left'>Level</th>
+                                    <th className='w-48 text-center'>ID</th>
+                                    <th className='w-48 text-left'>Category</th>
+                                    {/* <th className='w-32 text-left'>Level</th> */}
                                     <th className='w-32 text-left'>Title</th>
                                     <th className='w-32 text-left'>Headlines</th>
                                     <th className='w-32 text-left'>Author</th>
                                     <th className='text-left'>Created Date</th>
                                     <th className='text-left'>
-                                        <div className='flex justify-between'>
+                                        <div className='flex  justify-between'>
                                             <div>Photo</div>
-                                            <div>Actions</div>
+                                            <div className='text-center'>Actions</div>
                                         </div>
                                     </th>
                                 </tr>
-                                {
-                                  Data.map((item, index) => (
-                                  <tr key={index} className={`${index % 2 === 0 ? 'bg-sky-50' : 'bg-white'} text-sky-800 text-xs h-8 rounded-xl`}>
+                                <tbody>
+                                  {apiData.map((item, index) => (
+                                    <tr key={index} className={`${index % 2 === 0 ? 'bg-sky-50' : 'bg-white'} text-sky-800 text-xs h-8 rounded-xl`}>
                                     <td className="text-center">{item.id}</td>
-                                    <td className='pl-3'>{item.Company}</td>
-                                    <td>{item.StartDate}</td>
-                                    <td>{item.EndDate}</td>
-                                    <td>{item.StartDate}</td>
-                                    <td>{item.EndDate}</td>
-                                    <td>{item.Remark}</td>
+                                    <td className="">{item.Category}</td>
+                                    {/* <td className="">{item.Category}</td> */}
+                                    <td className="">{item.Title}</td>
+                                    <td className="">{item.Headlines}</td>
+                                    <td className="">{item.Author}</td>
+                                    <td className="">
+                                      {(() => {
+                                        const dateString = item.created_at; // Assuming item.created_at holds the date string "2023-07-11T09:34:47.000Z"
+                                        const date = new Date(dateString);
+                                        const formattedDate = date.toDateString();
+
+                                        return (
+                                          <div>
+                                            {formattedDate}
+                                          </div>
+                                        );
+                                      })()}
+                                    </td>
+
+                                    <td className="">
+                                      <div className=''>
+                                        <Link to={item.Photo}>
+                                        <img className='object-cover w-[130px] h-[80px]' src={item.Photo} />
+                                        </Link>
+                                      </div>
+                                    </td>
+
                                     <td className='pr-4'>
-                                        <div className='flex justify-between'>
-                                            <div>{item.Remark}</div>
-                                            <div className='flex space-x-3'>
-                                                <div><BiEdit className='text-[23px] text-green-500' /></div>
-                                                <div><AiFillDelete className='text-[23px] text-red-500' /></div>
-                                            </div>
-                                        </div>
+                                      <div className='flex space-x-3'>
+                                          <div><BiEdit className='text-[23px] text-green-500' /></div>
+                                          <div><AiFillDelete className='text-[23px] text-red-500' /></div>
+                                      </div>
                                     </td>
                                   </tr>
                                   ))
                                 }
-                                
+                                </tbody>
                                 
                             </table>
                         

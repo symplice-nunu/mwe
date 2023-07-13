@@ -3,7 +3,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 export default function TopNews() {
   return (
-    <div className='flex space-x-[2px] my-8 pt-[160px]'>
+    <div className='flex space-x-[2px] mb-8 pt-[160px]'>
         <div className=" text-white flex items-end pb-[30px] pl-[25px] pr-[84px] bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/03-750x375.jpg')] bg-cover bg-center w-full">
             <div className='w-full'>
             <div className='bg-[#9f4bc3] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[108px]'>ENTERTAINMENT</div>

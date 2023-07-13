@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/entertainment" element={<Entertainment />} ></Route>
         <Route exact path="/sport" element={<Sport />} ></Route>
         <Route exact path="/news" element={<News />} ></Route>
-        <Route exact path="/dashboard" element={<Dashboard />} ></Route>
+        <Route exact path="/mc-cadman" element={<Dashboard />} ></Route>
         <Route exact path="/add_news" element={<AddNews />} ></Route>
         <Route path="*" element={<NotFound />} ></Route>
       </Routes>

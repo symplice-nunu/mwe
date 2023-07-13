@@ -4,6 +4,7 @@ import { BiEdit } from 'react-icons/bi';
 import { AiFillDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
+import Spinner from '../../../../Assets/images/Spinner.gif'
 
 const Data = () => {
   const [selectedData, setSelectedData] = useState({});
@@ -31,8 +32,15 @@ const Data = () => {
   const response = await axios.get('http://localhost:5000/api/v1/news');
     return response.data;
   });
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (isLoading) return <div className='bg-green-500 p-2 rounded'>  
+    <div className='bg-white justify-center rounded text-green-500 flex text-[30px] font-bold'> 
+  <div className=''>
+    <img  className="h-[50px]" src={Spinner} />
+  </div> 
+  <div>Loading...</div>
+  </div>
+  </div>;
+  if (error) return <div className='bg-red-400 text-center py-2 rounded text-white text-[30px]'>Error: {error.message}</div>;
   return (
     <div>
      

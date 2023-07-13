@@ -3,13 +3,13 @@ import axios from 'axios';
 import { BiEdit } from 'react-icons/bi';
 import { AiFillDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Data = () => {
-
+  const [selectedData, setSelectedData] = useState({});
   const [showModal, setShowModal] = React.useState(false);
   const { data, isLoading, error } = useQuery('example', async () => {
-    const response = await axios.get('http://localhost:5000/api/v1/news');
+  const response = await axios.get('http://localhost:5000/api/v1/news');
     return response.data;
   });
 
@@ -29,7 +29,10 @@ const Data = () => {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t ">
                   <h3 className="text-3xl font-semibold">
-                    EDIT NEWS
+                    <div className='flex gap-2'>
+                    <div>EDIT NEWS ABOUT </div>
+                    <div className='text-green-700'>{selectedData?.Category} </div>
+                    </div>
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -51,7 +54,12 @@ const Data = () => {
       <div class="relative z-0 w-full mb-5">
         <input
           type="text"
-          name="email"
+          name="Title"
+          onChange={(e) => setSelectedData({
+            ...selectedData,
+            Title: e.target.value,
+          })}
+          value={selectedData?.Title}
           placeholder="Enter News Title"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
         />
@@ -60,7 +68,12 @@ const Data = () => {
       <div class="relative z-0 w-full mb-5 ">
         <input
           type="text"
-          name="email"
+          name="Headlines"
+          onChange={(e) => setSelectedData({
+            ...selectedData,
+            Headlines: e.target.value,
+          })}
+          value={selectedData?.Headlines}
           placeholder="Enter Headlines"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
         />
@@ -69,7 +82,12 @@ const Data = () => {
       <div class="relative z-0 w-full mb-5">
         <input
           type="text"
-          name="Headlines"
+          name="Author"
+          onChange={(e) => setSelectedData({
+            ...selectedData,
+            Author: e.target.value,
+          })}
+          value={selectedData?.Author}
           placeholder="Enter Author"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
         />
@@ -79,7 +97,12 @@ const Data = () => {
       <div class="relative z-0 w-full mb-5">
         <input
           type="text"
-          name="password"
+          name="Photo"
+          onChange={(e) => setSelectedData({
+            ...selectedData,
+            Photo: e.target.value,
+          })}
+          value={selectedData?.Photo}
           placeholder="Enter News Photo"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
         />
@@ -87,17 +110,31 @@ const Data = () => {
       </div>
 
 <div class="relative z-0 w-full mb-5">
-        <select className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
-            <option>Entertainment</option>
-            <option>Business</option>
-            <option>Sport</option>
-            <option>Health</option>
-            <option>Lifestyle</option>
+        <select name='Category'
+          onChange={(e) => setSelectedData({
+            ...selectedData,
+            Category: e.target.value,
+          })}
+           className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
+            <option value={selectedData?.Photo}>{selectedData?.Category}</option>
+            <option value='Entertainment'>Entertainment</option>
+            <option value='Business'>Business</option>
+            <option value='Sport'>Sport</option>
+            <option value='Health'>Health</option>
+            <option value='Lifestyle'>Lifestyle</option>
         </select>
   <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
 </div>
 <div class="relative z-0 w-full mb-5">
-    <textarea placeholder='Enter full News Content' className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
+    <textarea
+          name='Content'
+          onChange={(e) => setSelectedData({
+            ...selectedData,
+            Content: e.target.value,
+          })} 
+          value={selectedData?.Content} 
+          placeholder='Enter full News Content' 
+          className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
         
     </textarea>
 </div>
@@ -156,7 +193,7 @@ const Data = () => {
                     <td className="">{item.Author}</td>
                     <td className="">
                       {(() => {
-                        const dateString = item.created_at; // Assuming item.created_at holds the date string "2023-07-11T09:34:47.000Z"
+                        const dateString = item.created_at;
                         const date = new Date(dateString);
                         const formattedDate = date.toDateString();
 
@@ -178,7 +215,10 @@ const Data = () => {
 
                     <td className='pr-4'>
                       <div className='flex space-x-3'>
-                          <div ><BiEdit onClick={() => setShowModal(true)} className='cursor-pointer text-[23px] text-green-500' /></div>
+                          <div ><BiEdit onClick={() => {
+                            setSelectedData(item);
+                            setShowModal(true)
+                            }} className='cursor-pointer text-[23px] text-green-500' /></div>
                           <div><AiFillDelete className='text-[23px] text-red-500' /></div>
                       </div>
                     </td>

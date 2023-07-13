@@ -12,7 +12,6 @@ const Data = () => {
   const response = await axios.get('http://localhost:5000/api/v1/news');
     return response.data;
   });
-
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   return (
@@ -188,8 +187,23 @@ const Data = () => {
                     <tr key={index} className={`${index % 2 === 0 ? 'bg-sky-50' : 'bg-white'} text-sky-800 text-xs h-8 rounded-xl`}>
                     <td className="text-center">{item.id}</td>
                     <td className="">{item.Category}</td>
-                    <td className="">{item.Title}</td>
-                    <td className="">{item.Headlines}</td>
+                    <td className="">
+                      {(() => {
+                        const Titlle = item.Title;
+                        const NewTitle = Titlle.split(' ');
+                        const Titlee = NewTitle.slice(0, 2).join(' ');
+                        return <div>{Titlee}</div>;
+                      })()}
+                    </td>
+
+                    <td className="">
+                      {(() => {
+                        const Titlle = item.Headlines;
+                        const NewTitle = Titlle.split(' ');
+                        const Titlee = NewTitle.slice(0, 2).join(' ');
+                        return <div>{Titlee}</div>;
+                      })()}
+                    </td>
                     <td className="">{item.Author}</td>
                     <td className="">
                       {(() => {

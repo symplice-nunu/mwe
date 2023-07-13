@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './Components/Home';
-import World from "./Components/Pages/World";
-import Lifestyle from "./Components/Pages/Lifestyle";
-import Sport from "./Components/Pages/Sport";
-import Business from "./Components/Pages/Business";
-import Entertainment from "./Components/Pages/Entertainment";
-import NotFound from "./Components/Pages/404";
-import Dashboard from "./Components/Dashboard/Dashboard"
-import News from "./Components/Dashboard/News"
-import AddNews from "./Components/Dashboard/AddNews";
+import Home from './Components/Sections/Home'
+import World from "./Pages/World";
+import Lifestyle from "./Pages/Lifestyle";
+import Sport from "./Pages/Sport";
+import Business from "./Pages/Business";
+import Entertainment from "./Pages/Entertainment";
+import NotFound from "./Pages/404";
+import Dashboard from "./Components/Sections/Dashboard/Dashboard"
+import News from "./Components/Sections/Dashboard/News"
+import AddNews from "./Components/Sections/Dashboard/AddNews";
 
 function App() {
   return (

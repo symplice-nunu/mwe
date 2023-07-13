@@ -1,15 +1,15 @@
 import React from 'react'
-import Navbar from '../Navbar'
-import Footer from '../Footer'
-import Copyright from '../Copyright'
-import BusinessTopNews from '../Business/BusinessTopNews'
+import Navbar from '../Components/Sections/Navbar'
+import Footer from '../Components/Sections/Footer'
+import Copyright from '../Components/Sections/Copyright'
+import SportTopNews from '../Components/Sections/Sport/SportTopNews'
 
-export default function Business() {
+export default function Sport() {
   return (
     <div>
     <div><Navbar /></div>
     <div className='px-[120px] pt-[130px]'>
-    <div><BusinessTopNews /></div>
+        <div><SportTopNews /></div>
     </div>
     <div className="bg-[#222a2f] text-white px-[120px] py-[35px]">
       <Footer />

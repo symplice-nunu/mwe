@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../Navbar'
-import Footer from '../Footer'
-import Copyright from '../Copyright'
-import WorldTopNews from '../World/WorldTopNews'
+import Navbar from '../Components/Sections/Navbar'
+import Footer from '../Components/Sections/Footer'
+import Copyright from '../Components/Sections/Copyright'
+import WorldTopNews from '../Components/Sections/World/WorldTopNews'
 export default function World() {
   return (
     <div>

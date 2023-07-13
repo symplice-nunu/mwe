@@ -1,5 +1,5 @@
 import React from 'react'
-import TrendingTopStories from './Pages/TrendingTopStories'
+import TrendingTopStories from '../../Pages/TrendingTopStories'
 import Entertainment from './Entertainment'
 
 export default function TrendingStories() {

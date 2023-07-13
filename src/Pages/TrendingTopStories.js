@@ -1,5 +1,5 @@
 import React from 'react'
-import { TrendingStoriesData } from '../Data/TrendingStoriesData'
+import { TrendingStoriesData } from '../Components/Sections/Data/TrendingStoriesData'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { FaGreaterThan } from 'react-icons/fa'
 import { FaLessThan } from 'react-icons/fa'

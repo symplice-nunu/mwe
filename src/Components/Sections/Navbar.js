@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavbarData } from './Data/NavbarData'
 import { AiOutlineSearch } from 'react-icons/ai'
-import Og from '../Assets/images/og.png'
+import Og from '../../Assets/images/og.png'
 import { Link, useLocation } from 'react-router-dom'
 import { TopNewsData } from './Data/TopNewsData'
 

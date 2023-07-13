@@ -1,7 +1,7 @@
 import {FaJsfiddle} from 'react-icons/fa'
 import {FaBan} from 'react-icons/fa'
 import {FaBrush} from 'react-icons/fa'
-import mweLogo from '../../Assets/images/og.png'
+import mweLogo from '../../../Assets/images/og.png'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 

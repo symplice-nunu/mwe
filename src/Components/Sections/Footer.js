@@ -1,5 +1,5 @@
 import React from 'react'
-import mweLogo from '../Assets/images/og.png'
+import mweLogo from '../../Assets/images/og.png'
 import { CategoriesData } from './Data/CategoriesData'
 import { BrowseTagData } from './Data/BrowseTagData'
 export default function Footer() {

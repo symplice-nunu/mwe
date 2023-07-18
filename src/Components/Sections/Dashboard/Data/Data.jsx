@@ -3,7 +3,7 @@ import axios from 'axios';
 import { BiEdit } from 'react-icons/bi';
 import { AiFillDelete } from 'react-icons/ai';
 import { Link } from 'react-router-dom'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Spinner from '../../../../Assets/images/Spinner.gif'
 
 const Data = () => {
@@ -17,7 +17,13 @@ const Data = () => {
     },
   });
   const [successMessage, setSuccessMessage] = useState('');
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSuccessMessage(false);
+    }, 5000);
 
+    return () => clearTimeout(timer);
+  }, []);
   const handleDelete = async (id) => {
     // mutation.mutate(id);
     try {
@@ -40,7 +46,7 @@ const Data = () => {
   <div>Loading...</div>
   </div>
   </div>;
-  if (error) return <div className='bg-red-400 text-center py-2 rounded text-white text-[30px]'>Error: {error.message}</div>;
+  if (error) return <div className='bg-red-400 text-center py-2 rounded text-white text-[30px]'>No news items found.</div>;
   return (
     <div>
      
@@ -73,101 +79,101 @@ const Data = () => {
                 <div className="relative p-6 flex-auto">
                   <p className=" text-slate-500 text-lg leading-relaxed ">
                     <div class=" bg-gray-100 p-0 sm:p-3 sm:rounded-3xl ">
-  <div class="mx-auto px-6 py-3 bg-white border-0 shadow-lg sm:rounded-3xl w-[650px]">
-    <form id="form" novalidate>
-     
+              <div class="mx-auto px-6 py-3 bg-white border-0 shadow-lg sm:rounded-3xl w-[650px]">
+                <form id="form" novalidate>
+                
 
-      <div class="relative z-0 w-full mb-5">
-        <input
-          type="text"
-          name="Title"
-          onChange={(e) => setSelectedData({
-            ...selectedData,
-            Title: e.target.value,
-          })}
-          value={selectedData?.Title}
-          placeholder="Enter News Title"
-          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <span class="text-sm text-red-600 hidden" id="error">News Title is required</span>
-      </div>
-      <div class="relative z-0 w-full mb-5 ">
-        <input
-          type="text"
-          name="Headlines"
-          onChange={(e) => setSelectedData({
-            ...selectedData,
-            Headlines: e.target.value,
-          })}
-          value={selectedData?.Headlines}
-          placeholder="Enter Headlines"
-          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <span class="text-sm text-red-600 hidden" id="error">Headlines is required</span>
-      </div>
-      <div class="relative z-0 w-full mb-5">
-        <input
-          type="text"
-          name="Author"
-          onChange={(e) => setSelectedData({
-            ...selectedData,
-            Author: e.target.value,
-          })}
-          value={selectedData?.Author}
-          placeholder="Enter Author"
-          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <span class="text-sm text-red-600 hidden" id="error">Author is required</span>
-      </div>
+                  <div class="relative z-0 w-full mb-5">
+                    <input
+                      type="text"
+                      name="Title"
+                      onChange={(e) => setSelectedData({
+                        ...selectedData,
+                        Title: e.target.value,
+                      })}
+                      value={selectedData?.Title}
+                      placeholder="Enter News Title"
+                      class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                    />
+                    <span class="text-sm text-red-600 hidden" id="error">News Title is required</span>
+                  </div>
+                  <div class="relative z-0 w-full mb-5 ">
+                    <input
+                      type="text"
+                      name="Headlines"
+                      onChange={(e) => setSelectedData({
+                        ...selectedData,
+                        Headlines: e.target.value,
+                      })}
+                      value={selectedData?.Headlines}
+                      placeholder="Enter Headlines"
+                      class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                    />
+                    <span class="text-sm text-red-600 hidden" id="error">Headlines is required</span>
+                  </div>
+                  <div class="relative z-0 w-full mb-5">
+                    <input
+                      type="text"
+                      name="Author"
+                      onChange={(e) => setSelectedData({
+                        ...selectedData,
+                        Author: e.target.value,
+                      })}
+                      value={selectedData?.Author}
+                      placeholder="Enter Author"
+                      class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                    />
+                    <span class="text-sm text-red-600 hidden" id="error">Author is required</span>
+                  </div>
 
-      <div class="relative z-0 w-full mb-5">
-        <input
-          type="text"
-          name="Photo"
-          onChange={(e) => setSelectedData({
-            ...selectedData,
-            Photo: e.target.value,
-          })}
-          value={selectedData?.Photo}
-          placeholder="Enter News Photo"
-          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
-        <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
-      </div>
+                  <div class="relative z-0 w-full mb-5">
+                    <input
+                      type="text"
+                      name="Photo"
+                      onChange={(e) => setSelectedData({
+                        ...selectedData,
+                        Photo: e.target.value,
+                      })}
+                      value={selectedData?.Photo}
+                      placeholder="Enter News Photo"
+                      class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                    />
+                    <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
+                  </div>
 
-<div class="relative z-0 w-full mb-5">
-        <select name='Category'
-          onChange={(e) => setSelectedData({
-            ...selectedData,
-            Category: e.target.value,
-          })}
-           className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
-            <option value={selectedData?.Photo}>{selectedData?.Category}</option>
-            <option value='Entertainment'>Entertainment</option>
-            <option value='Business'>Business</option>
-            <option value='Sport'>Sport</option>
-            <option value='Health'>Health</option>
-            <option value='Lifestyle'>Lifestyle</option>
-        </select>
-  <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
-</div>
-<div class="relative z-0 w-full mb-5">
-    <textarea
-          name='Content'
-          onChange={(e) => setSelectedData({
-            ...selectedData,
-            Content: e.target.value,
-          })} 
-          value={selectedData?.Content} 
-          placeholder='Enter full News Content' 
-          className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
-        
-    </textarea>
-</div>
-    
-    </form>
-  </div>
-</div>
+                  <div class="relative z-0 w-full mb-5">
+                          <select name='Category'
+                            onChange={(e) => setSelectedData({
+                              ...selectedData,
+                              Category: e.target.value,
+                            })}
+                            className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
+                              <option value={selectedData?.Photo}>{selectedData?.Category}</option>
+                              <option value='Entertainment'>Entertainment</option>
+                              <option value='Business'>Business</option>
+                              <option value='Sport'>Sport</option>
+                              <option value='Health'>Health</option>
+                              <option value='Lifestyle'>Lifestyle</option>
+                          </select>
+                    <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
+                  </div>
+                  <div class="relative z-0 w-full mb-5">
+                      <textarea
+                            name='Content'
+                            onChange={(e) => setSelectedData({
+                              ...selectedData,
+                              Content: e.target.value,
+                            })} 
+                            value={selectedData?.Content} 
+                            placeholder='Enter full News Content' 
+                            className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
+                          
+                      </textarea>
+                  </div>
+                
+                </form>
+              </div>
+            </div>
                   </p>
                 </div>
                 {/*footer*/}
@@ -192,7 +198,8 @@ const Data = () => {
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
-      ) : null}{successMessage && 
+      ) : null}
+      {successMessage && 
       <div className='bg-red-400 rounded text-center text-white py-2 my-2 text-[20px]'><p>{successMessage}</p>
       </div>
       }
@@ -214,6 +221,7 @@ const Data = () => {
                 </tr>
                 <tbody>
                   {data.map((item, index) => (
+                    
                     <tr key={index} className={`${index % 2 === 0 ? 'bg-sky-50' : 'bg-white'} text-sky-800 text-xs h-8 rounded-xl`}>
                     <td className="text-center">{item.id}</td>
                     <td className="">{item.Category}</td>

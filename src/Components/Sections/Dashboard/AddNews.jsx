@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 import Sidebar from './Sidebar'
 import Navbar from "./Navbar"
-import { Link } from 'react-router-dom'
+import NewsForm from './NewsForm';
+import { QueryClient, QueryClientProvider } from 'react-query';
+const queryClient = new QueryClient();
 
 export default function AddNews() {
+  
   return (
     <div className='bg-[#87cefa] w-full h-screen p-12'>
         <div className='bg-white w-full rounded-3xl flex'>
@@ -31,88 +34,13 @@ export default function AddNews() {
                 <div className="relative p-6 flex-auto">
                   <p className=" text-slate-500 text-lg leading-relaxed ">
                     <div class=" bg-gray-100 p-0 sm:p-3 sm:rounded-3xl ">
-                <div class="mx-auto px-6 py-3 bg-white border-0 shadow-lg sm:rounded-3xl ">
-                  <form id="form" novalidate>
-                  
-
-                    <div class="relative z-0 w-full mb-5">
-                      <input
-                        type="text"
-                        name="email"
-                        placeholder="Enter News Title"
-                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-                      />
-                      <span class="text-sm text-red-600 hidden" id="error">News Title is required</span>
-                    </div>
-                    <div class="relative z-0 w-full mb-5 ">
-                      <input
-                        type="text"
-                        name="email"
-                        placeholder="Enter Headlines"
-                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-                      />
-                      <span class="text-sm text-red-600 hidden" id="error">Headlines is required</span>
-                    </div>
-                    <div class="relative z-0 w-full mb-5">
-                      <input
-                        type="text"
-                        name="Headlines"
-                        placeholder="Enter Author"
-                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-                      />
-                      <span class="text-sm text-red-600 hidden" id="error">Author is required</span>
-                    </div>
-
-                    <div class="relative z-0 w-full mb-5">
-                      <input
-                        type="text"
-                        name="password"
-                        placeholder="Enter News Photo"
-                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-                      />
-                      <span class="text-sm text-red-600 hidden" id="error">News Photo is required</span>
-                    </div>
-
-                    <div class="relative z-0 w-full mb-5">
-                            <select className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
-                                <option>Entertainment</option>
-                                <option>Business</option>
-                                <option>Sport</option>
-                                <option>Health</option>
-                                <option>Lifestyle</option>
-                            </select>
-                      <span class="text-sm text-red-600 hidden" id="error">News Category is required</span>
-                    </div>
-                    <div class="relative z-0 w-full mb-5">
-                        <textarea placeholder='Enter full News Content' className='pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200'>
-                            
-                        </textarea>
-                    </div>
-                        
-                    </form>
-                      </div>
+                    <QueryClientProvider client={queryClient}>
+                      <NewsForm />
+                    </QueryClientProvider>
                     </div>
                   </p>
                 </div>
-                {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                  <Link to="/dashboard">
-                  <button
-                    className="text-red-500 bg-[#87cefa] rounded font-bold uppercase px-6 py-3 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    
-                  >
-                    Cancel
-                  </button>
-                  </Link>
-                  <button
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    
-                  >
-                    SUBMIT
-                  </button>
-                </div>
+                
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
         <Navbar />
-      <div className='px-[120px]'>
+      <div className='xl:px-[120px] lg:px-[120px] px-[5px]'>
         <TopNews />
         <FeaturedStories />
         

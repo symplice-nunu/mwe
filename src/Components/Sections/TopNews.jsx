@@ -3,8 +3,8 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 export default function TopNews() {
   return (
-    <div className='flex space-x-[2px] mb-8 pt-[160px]'>
-        <div className=" text-white flex items-end pb-[30px] pl-[25px] pr-[84px] bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/03-750x375.jpg')] bg-cover bg-center w-full">
+    <div className='grid grid-cols-1 gap-3 lg:flex md:flex xl:flex space-x-[2px] lg:mb-8 xl:mb-8 xl:pt-[160px] lg:pt-[160px] pt-[140px]'>
+        <div className=" text-white flex items-end pb-[30px] pl-[25px]  bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/03-750x375.jpg')] bg-cover bg-center w-full">
             <div className='w-full'>
             <div className='bg-[#9f4bc3] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[108px]'>ENTERTAINMENT</div>
             <div className='text-[26px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
@@ -18,7 +18,7 @@ export default function TopNews() {
             </div>
             <div className='w-[0px]'></div>
         </div>
-        <div className="bg-teal-400 w-[590px] flex items-end pb-[30px] px-[15px] text-white  bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/19-750x375.jpg')] bg-cover bg-center" >
+        <div className="bg-teal-400 lg:w-[590px] xl:w-[590px] flex items-end pb-[30px] px-[15px] text-white  bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/19-750x375.jpg')] bg-cover bg-center" >
         <div className='w-full'>
             <div className='bg-[#fe495c] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[66px]'>BUSINESS</div>
             <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
@@ -33,7 +33,7 @@ export default function TopNews() {
             <div className='w-[0px]'></div>
         </div>
         <div className='space-y-[2px]'>
-        <div className="w-[270px] bg-blue-300 h-[230px] flex items-end pb-[30px] px-[15px] text-white bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/18-750x375.jpg')] bg-cover bg-center">
+        <div className="xl:w-[270px] lg:w-[270px] bg-blue-300 h-[230px] flex items-end pb-[30px] px-[15px] text-white bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/18-750x375.jpg')] bg-cover bg-center">
         <div className='w-full'>
             <div className='bg-[#9f4bc3] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[108px]'>ENTERTAINMENT</div>
             <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>
@@ -47,7 +47,7 @@ export default function TopNews() {
             </div>
             <div className='w-[0px]'></div>
         </div>
-        <div className="w-[270px] bg-blue-300 h-[230px] flex items-end pb-[30px] px-[15px] text-white bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/05-750x375.jpg')] bg-cover bg-center bg-no-repeat">
+        <div className="xl:w-[270px] lg:w-[270px] bg-blue-300 h-[230px] flex items-end pb-[30px] px-[15px] text-white bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/05-750x375.jpg')] bg-cover bg-center bg-no-repeat">
         <div className='w-full'>
             <div className='bg-[#c49529] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[63px]'>FASHION</div>
             <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>

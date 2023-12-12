@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { TbMathGreater } from 'react-icons/tb'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TopLatestPost from '../TopLatestPost';
 import PostRightSide from '../PostRightSide';
 

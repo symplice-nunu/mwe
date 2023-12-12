@@ -1,5 +1,6 @@
 import React from 'react'
 import { FollowUpData } from './Data/FollowUpData'
+import { Link } from 'react-router-dom'
 
 export default function Copyright() {
   return (
@@ -10,7 +11,7 @@ export default function Copyright() {
                 FollowUpData.map((item) => {
                     return(
                         <div>
-                            <div className='text-[21px] cursor-pointer'> <a href="#" >{item.FollowLogo}</a> </div>
+                            <div className='text-[21px] cursor-pointer'> <Link>{item.FollowLogo}</Link> </div>
                         </div>
                     )
                 })

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import { FaRegComment } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -32,7 +33,7 @@ export default function TrendingComments() {
         date: '2h ago',
         commentCount: 3,
         shareCount: 2,
-      },,
+      },
       {
         id: 2,
         photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/02/07-750x375.jpg',
@@ -153,7 +154,7 @@ export default function TrendingComments() {
                     className="relative rounded-md"
                   >
                    <div className='grid grid-cols-2 mb-[23px]'>
-                   <div><img className='w-[150px] object-cover h-[100px]' src={post.photo} /></div>
+                   <div><img className='w-[150px] object-cover h-[100px]' src={post.photo} alt='news' /></div>
                    <div>
                    <div>
                     <h3 className="text-sm font-medium leading-5">
@@ -175,9 +176,8 @@ export default function TrendingComments() {
                     </div>
                    </div>
                    </div>
-
-                    <a
-                      href="#"
+                    <Link
+                      to="/"
                       className={classNames(
                         'absolute inset-0 rounded-md',
                         ' focus:z-10 focus:outline-none focus:ring-2'

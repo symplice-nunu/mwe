@@ -7,7 +7,7 @@ export default function Footer() {
     <div className='my-[80px]'>
         <div className='flex gap-20'>
             <div className='font-[Heebo] text-[18px]'>
-                <div className='mb-12'><img className='w-[120px]' src={mweLogo} /></div>
+                <div className='mb-12'><img className='w-[120px]' src={mweLogo} alt='news' /></div>
                 <div className='mb-8 text-[#a9adae] text-[22px]'>
                     <div>We bring you the best Premium</div> 
                     <div>WordPress Themes that perfect for news,</div> 

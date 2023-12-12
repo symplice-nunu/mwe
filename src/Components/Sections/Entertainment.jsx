@@ -19,7 +19,7 @@ export default function Entertainment() {
                 TopNewsData.map((item) => {
                     return(
                         <div className={`${item.Level === "Mid" ? "hidden" : null} w-[400px]`}>
-                            <div><img className='w-[400px]' src={item.Photo} /></div>
+                            <div><img className='w-[400px]' src={item.Photo} alt='news' /></div>
                             <div className='font-[Poppins] text-[20px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                             <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>
                                 <div className='text-[#aaaaaa]'>BY <span className='text-[#1d96fb]'>{item.Author}</span></div>
@@ -48,7 +48,7 @@ export default function Entertainment() {
                 TopNewsData.map((item) => {
                     return(
                         <div className={`${item.Level === "Mid" ? "hidden" : null} w-[400px]`}>
-                            <div><img className='w-[400px]' src={item.Photo} /></div>
+                            <div><img className='w-[400px]' src={item.Photo} alt='news' /></div>
                             <div className='font-[Poppins] text-[20px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                             <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>
                                 <div className='text-[#aaaaaa]'>BY <span className='text-[#1d96fb]'>{item.Author}</span></div>
@@ -74,7 +74,7 @@ export default function Entertainment() {
                 TopNewsData.map((item) => {
                     return(
                  <div className='flex gap-5 mb-6'>
-                    <div><img className='w-[150px] h-[100px] object-cover ' src={item.Photo} /></div>
+                    <div><img className='w-[150px] h-[100px] object-cover ' src={item.Photo} alt='news' /></div>
                     <div>
                     <div className='text-[16px] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
                     <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>
@@ -92,7 +92,7 @@ export default function Entertainment() {
                 TopNewsData.map((item) => {
                     return(
                  <div className='flex gap-5 mb-6'>
-                    <div><img className='w-[150px] h-[100px] object-cover ' src={item.Photo} /></div>
+                    <div><img className='w-[150px] h-[100px] object-cover ' src={item.Photo} alt='news' /></div>
                     <div>
                     <div className='text-[16px] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</div>
                     <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>

@@ -12,7 +12,7 @@ export default function TopLatestPost() {
                 TopNewsData.map((item) => {
                     return(
                         <div className={` flex gap-12 mb-10`}>
-                            <div><img className='w-[800px] h-[400px] object-cover' src={item.Photo} /></div>
+                            <div><img className='w-[800px] h-[400px] object-cover' src={item.Photo}  alt='news'/></div>
                             <div className='w-[800px]'>
                             <div className='font-[Poppins] text-[33px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                             <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>

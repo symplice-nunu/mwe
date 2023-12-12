@@ -13,7 +13,7 @@ export default function TopHeadlines() {
                 TopNewsData.map((item) => {
                     return(
                         <div className={`${item.Level === "Mid" ? "hidden" : null} w-[600px]`}>
-                            <div><img className='w-[600px] object-cover' src={item.Photo} /></div>
+                            <div><img className='w-[600px] object-cover' src={item.Photo} alt='news' /></div>
                             <div className='font-[Poppins] text-[30px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                             <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>
                                 <div className='text-[#aaaaaa]'>BY <span className='text-[#1d96fb]'>{item.Author}</span></div>
@@ -39,7 +39,7 @@ export default function TopHeadlines() {
                 TopNewsData.map((item) => {
                     return(
                  <div className='flex gap-5 mb-6 '>
-                    <div className='w-[150px] h-[100px]'><img className='w-full h-full object-cover' src={item.Photo} /></div>
+                    <div className='w-[150px] h-[100px]'><img className='w-full h-full object-cover' src={item.Photo} alt='news' /></div>
                     <div className='w-[80%] min-h-[70px]'>
                         <h1 className='text-[20px] w-[80%] font-bold font-[Poppins] hover:text-[#1d96fb]'>{item.Headlines}</h1>
                         <div className='font-[Heebo] text-[#a9a9a9] text-[11px] flex space-x-[2px] mt-1'>

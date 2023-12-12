@@ -41,7 +41,7 @@ const Data = () => {
   if (isLoading) return <div className='bg-green-500 p-2 rounded'>  
     <div className='bg-white justify-center rounded text-green-500 flex text-[30px] font-bold'> 
   <div className=''>
-    <img  className="h-[50px]" src={Spinner} />
+    <img  className="h-[50px]" src={Spinner} alt='spinner' />
   </div> 
   <div>Loading...</div>
   </div>
@@ -260,7 +260,7 @@ const Data = () => {
                     <td className="">
                       <div className='w-[130px] h-[80px]'>
                         <Link to={item.Photo}>
-                        <img className='object-cover w-[130px] h-[80px]' src={item.Photo} />
+                        <img className='object-cover w-[130px] h-[80px]' src={item.Photo} alt='cover' />
                         </Link>
                       </div>
                     </td>

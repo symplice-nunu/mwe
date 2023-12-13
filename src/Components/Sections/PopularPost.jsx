@@ -4,7 +4,7 @@ import Categories from './Categories'
 
 export default function PopularPost() {
   return (
-    <div className='w-[480px]'>
+    <div className='xl:w-[480px] lg:w-[480px]'>
     <div className='text-[17px] text-[#353c40]'>Popular Post</div>
   <div className='flex'>
     <div className='h-[2px] mt-2 bg-[#1d96fb] w-10'></div>

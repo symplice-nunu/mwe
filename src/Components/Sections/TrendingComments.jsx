@@ -118,7 +118,7 @@ export default function TrendingComments() {
   })
 
   return (
-    <div className="w-full max-w-md px-2 py-16 sm:px-0">
+    <div className="w-full  px-2 py-16 ">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl  p-1">
           {Object.keys(categories).map((category) => (
@@ -151,10 +151,10 @@ export default function TrendingComments() {
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="relative rounded-md"
+                    className="relative rounded-md "
                   >
-                   <div className='grid grid-cols-2 mb-[23px]'>
-                   <div><img className='w-[150px] object-cover h-[100px]' src={post.photo} alt='news' /></div>
+                   <div className='grid grid-cols-2 gap-3 mb-[23px] '>
+                   <div><img className='w-[150px] xl:w-[150px] lg:w-[150px] md:w-full  object-cover h-[100px] xl:h-[100px] lg:h-[100px] md:h-[200px]' src={post.photo} alt='news' /></div>
                    <div>
                    <div>
                     <h3 className="text-sm font-medium leading-5">

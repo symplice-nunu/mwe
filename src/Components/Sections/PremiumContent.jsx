@@ -10,11 +10,11 @@ export default function PremiumContent() {
         <div className='bg-[#1d96fb] h-[2px] w-[40px]'></div>
         <div className='bg-[#4f5559] h-[2px] w-full'></div>
       </div>
-      <div className='flex space-x-8 '>
+      <div className='xl:flex lg:flex gap-8 grid md:grid-cols-2'>
         {
             PremiumContentData.map((item) => {
                 return(
-                    <div className='text-white w-[280px]'>
+                    <div className='text-white xl:w-[280px] lg:w-[280px]'>
                         <div className="bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/16-350x250.jpg')] bg-cover bg-center  h-[180px] flex items-end p-2">
                             <div className={`${item.title === "FOOD" ? "bg-[#3ae030]" : item.title === "HEALTH" ? "bg-[#17d2fb]" : item.title === "FASHION" ? "bg-[#c49529]" : "bg-[#3cdc96]"} font-[Heebo] text-[11px] px-[7px] py-[2px] rounded`}>{item.title}</div>
                         </div>

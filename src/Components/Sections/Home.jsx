@@ -16,10 +16,10 @@ export default function Home() {
         <FeaturedStories />
         
     </div>
-    <div className='bg-[#222a2f] text-white px-[120px] py-[35px]'>
+    <div className='bg-[#222a2f] text-white xl:px-[120px] py-4 lg:px-[120px] px-[5px]'>
     <PremiumContent /> 
     </div>
-    <div className="px-[120px] py-[15px]">
+    <div className="xl:px-[120px] py-4 lg:px-[120px] px-[5px]">
     <LatestPosts /> 
     </div>
     <div className="bg-[#222a2f] text-white px-[120px] py-[35px]">

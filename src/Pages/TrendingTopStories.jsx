@@ -8,12 +8,12 @@ import { FaLessThan } from 'react-icons/fa'
 export default function TrendingTopStories() {
   return (
     <div>
-        <div className='flex space-x-8'>
+        <div className='flex flex-wrap gap-8'>
         {
             TrendingStoriesData.map((item) => {
                 return(
-                    <div className='text-white w-[320px]'>
-                        <div className="bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/20-750x375.jpg')] bg-cover bg-center w-[320px] h-[200px] flex items-end p-2">
+                    <div className='text-white xl:w-[320px] lg:w-[320px] w-full'>
+                        <div className="bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/20-750x375.jpg')] bg-cover bg-center xl:w-[320px] lg:w-[320px] w-full h-[200px] lg:h-[200px] xl:h-[200px] md:h-[400px] flex items-end p-2">
                             <div className={`${item.title === "TRAVEL" ? "bg-[#dfca3e]" : item.title === "BUSINESS" ? "bg-[#fe495c]" : "bg-[#3cdc96]"} font-[Heebo] text-[11px] px-[7px] py-[2px] rounded`}>{item.title}</div>
                         </div>
                         <div className='text-[#1b2227] font-[Poppins] hover:text-[#65b5fd] text-[18px] my-3'>{item.headlines}</div>

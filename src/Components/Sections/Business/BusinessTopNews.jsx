@@ -53,7 +53,7 @@ export default function BusinessTopNews() {
       </div>
       <div className='w-[0px]'></div>
   </div>
-  <div className="  bg-blue-300 hxl:h-[230px] lg:h-[230px] h-[350px] flex items-end pb-[30px] px-[15px] text-white bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/05/25-750x375.jpg')] bg-cover bg-center bg-no-repeat">
+  <div className="  bg-blue-300 xl:h-[230px] lg:h-[230px] h-[350px] flex items-end pb-[30px] px-[15px] text-white bg-[url('https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/05/25-750x375.jpg')] bg-cover bg-center bg-no-repeat">
   <div className='w-full'>
       <div className='bg-[#c49529] rounded font-[heebo] text-[11px] py-[4px] px-[7px] w-[63px]'>FASHION</div>
       <div className='text-[18px] font-[Poppins] py-3'>Instagram Is Testing Photo Albums, Because Nothing is Sacred Anymore</div>

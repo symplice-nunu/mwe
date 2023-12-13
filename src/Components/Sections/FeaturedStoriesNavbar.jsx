@@ -5,7 +5,7 @@ import TopHeadlines from './TopHeadlines'
 export default function FeaturedStoriesNavbar() {
   return (
     <div>
-      <div className='flex justify-between'>
+      <div className='xl:flex lg:flex justify-between'>
       <div className='text-[17px] text-[#fe495c]'>Featured Stories</div>
       <div className='flex space-x-4 font-[heebo] text-[12px] text-[#7b7b7b]'>
       {

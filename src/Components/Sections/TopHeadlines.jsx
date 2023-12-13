@@ -6,14 +6,14 @@ import TrendingStories from './TrendingStories'
 
 export default function TopHeadlines() {
   return (
-    <div>
-        <div className='mt-6 flex space-x-6'>
-        <div>
+    <div className=''>
+        <div className='mt-6 xl:flex lg:flex xl:space-x-6 lg:space-x-6'>
+        <div className=' '>
             {
                 TopNewsData.map((item) => {
                     return(
-                        <div className={`${item.Level === "Mid" ? "hidden" : null} w-[600px]`}>
-                            <div><img className='w-[600px] object-cover' src={item.Photo} alt='news' /></div>
+                        <div className={`${item.Level === "Mid" ? "hidden" : null} `}>
+                            <div><img className='  w-full object-cover' src={item.Photo} alt='news' /></div>
                             <div className='font-[Poppins] text-[30px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                             <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>
                                 <div className='text-[#aaaaaa]'>BY <span className='text-[#1d96fb]'>{item.Author}</span></div>

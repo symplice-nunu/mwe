@@ -4,7 +4,7 @@ import FollowUs from './FollowUs'
 
 export default function FeaturedStories() {
   return (
-    <div className='flex space-x-10'>
+    <div className='lg:flex xl:flex space-x-10'>
         <div><FeaturedStoriesNavbar /></div>
         <div><FollowUs /></div>
     </div>

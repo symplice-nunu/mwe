@@ -6,7 +6,7 @@ export const TopNewsData = [
         Headlines: 'Google, Facebook Extend Work From Home Policies Until 2021',
         Author: 'MC CADMAN',
         Time: 'MAY 18, 2023',
-        Photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/19-750x375.jpg',
+        Photo: 'https://jnews.io/bloomnews/wp-content/uploads/sites/75/2020/01/16-350x250.jpg',
         Content: 'Strech lining hemline above knee burgundy glossy silk complete hid zip little catches rayon. Tunic weaved strech calfskin spaghetti straps...',
     },
     {

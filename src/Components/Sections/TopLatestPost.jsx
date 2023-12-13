@@ -12,8 +12,8 @@ export default function TopLatestPost() {
                     TopNewsData.map((item) => {
                         return(
                             <div className="xl:flex lg:flex gap-12 mb-10">
-                                <div><img className='xl:w-[800px] lg:w-[800px] xl:h-[400px] lg:h-[400px] md:h-[400px] h-[200px] object-cover' src={item.Photo}  alt='news'/></div>
-                                <div className='w-[800px]'>
+                                <div><img className='xl:w-[800px] lg:w-[800px] xl:h-[400px] lg:h-[400px] w-full md:h-[400px] h-[200px] object-cover' src={item.Photo}  alt='news'/></div>
+                                <div className='xl:w-[800px] lg:w-[800px]'>
                                 <div className='font-[Poppins] text-[33px] hover:text-[#1d96fb] my-3'><b>{item.Headlines}</b></div>
                                 <div className='flex space-x-2 font-[Heebo] text-[11px] mb-6'>
                                     <div className='text-[#aaaaaa]'>BY <span className='text-[#1d96fb]'>{item.Author}</span></div>

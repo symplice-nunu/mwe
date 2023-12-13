@@ -4,7 +4,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 
 export default function PostRightSide() {
   return (
-    <div className='w-[480px]'>
+    <div className='xl:w-[480px] lg:w-[480px]'>
     <div className='text-[20px] font-bold text-[#353c40]'>Premium Content</div>
   <div className='flex'>
     <div className='h-[2px] mt-2 bg-[#1d96fb] w-10'></div>

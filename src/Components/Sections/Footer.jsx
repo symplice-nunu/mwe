@@ -4,8 +4,8 @@ import { CategoriesData } from './Data/CategoriesData'
 import { BrowseTagData } from './Data/BrowseTagData'
 export default function Footer() {
   return (
-    <div className='my-[80px]'>
-        <div className='flex gap-20'>
+    <div className='my-[10px]'>
+        <div className='xl:flex lg:flex gap-20'>
             <div className='font-[Heebo] text-[18px]'>
                 <div className='mb-12'><img className='w-[120px]' src={mweLogo} alt='news' /></div>
                 <div className='mb-8 text-[#a9adae] text-[22px]'>
@@ -36,7 +36,7 @@ export default function Footer() {
                     BrowseTagData.map((item) => {
                         return(
                             <div className='pb-2 text-[#cfcdc5] hover:text-white '>
-                                <div className={`${item.BrowseTagName === "Work From Home" ? "w-[155px]" : item.BrowseTagName === "Market Stories" ? "w-[155px]" : null} bg-[#31363a] hover:bg-[#1e96fc] mr-2 py-[10px] px-[14px]`}>{item.BrowseTagName}</div>
+                                <div className={`${item.BrowseTagName === "Work From Home" ? "xl:w-[155px] lg:w-[155px]" : item.BrowseTagName === "Market Stories" ? "xl:w-[155px] lg:w-[155px]" : null} bg-[#31363a] hover:bg-[#1e96fc]  mr-2 py-[10px] px-[14px]`}>{item.BrowseTagName}</div>
                             </div>
                         )
                     })
@@ -47,8 +47,8 @@ export default function Footer() {
             <span className='text-[28px]' >Recent Posts</span>
                 <div className='text-[#a9adae] mt-8'>
                 <div className='mb-6 text-[15px] hover:text-white'>This Easy Cardio Swap Will Help You Train for A Half Marathon</div>
-<div className='mb-6  hover:text-white text-[15px]'>Economists See Few Monetary Policy Changes With Powell Leading Fed</div>
-<div className=' hover:text-white text-[15px]'>Jekardah Nightlife Offers Many Hotspots for People with Alternative Lifestyles</div>
+                <div className='mb-6  hover:text-white text-[15px]'>Economists See Few Monetary Policy Changes With Powell Leading Fed</div>
+                <div className=' hover:text-white text-[15px]'>Jekardah Nightlife Offers Many Hotspots for People with Alternative Lifestyles</div>
                 </div>
             </div>
         </div>

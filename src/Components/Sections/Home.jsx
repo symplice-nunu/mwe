@@ -22,10 +22,10 @@ export default function Home() {
     <div className="xl:px-[120px] py-4 lg:px-[120px] px-[5px]">
     <LatestPosts /> 
     </div>
-    <div className="bg-[#222a2f] text-white px-[120px] py-[35px]">
+    <div className="bg-[#222a2f] text-white xl:px-[120px] py-1 lg:px-[120px] px-[5px] xl:py-[35px] lg:py-[35px]">
       <Footer />
     </div>
-    <div className="bg-[#000000] text-white px-[120px] py-[35px]">
+    <div className="bg-[#000000] text-white xl:px-[120px] py-1 pb-8 lg:px-[120px] px-[5px] xl:py-[35px] lg:py-[35px]">
       <Copyright />
     </div>
     </div>

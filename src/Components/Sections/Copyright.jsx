@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Copyright() {
   return (
-    <div className='flex justify-between'>
+    <div className='xl:flex lg:flex md:flex justify-between'>
         <div className='text-[#a9afb3]'>&copy; 2023 Million Ways Entertainment. All rights reserved.</div>
         <div className='flex gap-3'>
             {
